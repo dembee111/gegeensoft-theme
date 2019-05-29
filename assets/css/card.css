@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto|Ubuntu+Condensed&display=swap');
+:root {
+  --level-one: translateZ(3rem);
+  --level-two: translateZ(6rem);
+  --level-three: translateZ(9rem);
+  
+  --fw-normal: 400;
+  --fw-bold: 700;
+  
+  --clr: #b7c9e5;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+ 
+  font-family: 'Comfortaa', sans-serif!important;
+}
+
+.card3d {
+  width: 400px;
+}
+
+.card__content {
+  text-align: center;
+  position: relative;
+  padding: 15em 5em;
+  transition: transform 2s;
+  // background: pink;
+  transform-style: preserve-3d;
+}
+
+.card3d:hover .card__content {
+  transform: rotateY(.5turn);
+}
+
+.card__front,
+.card__back {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5em 3em;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  display: grid;
+  align-content: center;
+}
+
+.card__front {
+  background-color: var(--clr);
+  background-image: url('../img/abstract-1.png');
+  background-size: cover;
+  background-blend-mode: overlay;
+  color: #333;
+}
+
+.card__front::before {
+  content: '';
+  position: absolute;
+  --spacer: 1em;
+  top: var(--spacer);
+  bottom: var(--spacer);
+  left: var(--spacer);
+  right: var(--spacer);
+  border: 3px solid currentColor;
+  transform: var(--level-one);
+}
+
+.card__title {
+  font-size: 2.5rem;
+  transform: var(--level-three);
+  order: 2;
+  text-transform: uppercase;
+}
+
+.card__subtitle {
+  transform: var(--level-two);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: .75rem;
+  font-weight: var(--fw-bold);
+  opacity: .7;
+}
+
+.card__body {
+  transform: var(--level-two);
+  font-weight: var(fw-normal);
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+
+
+.card__back {
+  transform: rotateY(.5turn);
+  color: var(--clr);
+  background: #333;
+}
+
+.section-6 .card{
+  border: none !important;
+  border-radius: 0 !important;
+  
+  
+}
+.section-6 .card .card-body ul{
+ list-style-type: none;
+  
+  
+  
+}
+.section-6 .card img{
+  
+  border-radius: 0 !important;
+  
+
+  
+}
+.card-image{
+  position: relative;
+  overflow: hidden;
+}
+.card-image img{
+  max-width: 100%;
+  transition: transform 2s;
+}
+
+.section-6 .card-image:hover img{  
+  transform: scale(1.2);  
+}
+.section-6 .card .details{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: linear-gradient(150deg, rgba(40, 20, 131, 0.76) 15%, rgba(143, 110, 213, 0.89) 70%, rgba(215, 130, 217, 0.74) 94%);
+  transform: scaleY(0);
+  transition: transform .5s;
+
+}
+.section-6 .card:hover .details{
+  
+   transform: scaleY(1);
+}
+
+.section-6 .card .details .content{
+  
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   text-align: center;
+   padding: 15px;
+   color: #fff;
+}
+
+.section-6 .card .details .content h2{
+  
+   margin: 0;
+   padding: 0;
+   font-size: 20px;
+   color: #ff0;
+}
+.section-6 .card .details .content ul li{
+  
+   margin: 10px 0 0;
+   padding: 0;
+  
+}
+
+/* section-7 */
+
+.section-7 .container-fluid .row{
+ 
+  background-image: linear-gradient(150deg, rgba(40, 20, 131, 0.76) 15%, rgba(143, 110, 213, 0.89) 70%, rgba(215, 130, 217, 0.74) 94%),url('../img/section-7-back-image.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  height: 400px;
+  position: relative;
+}
+
+.section-7 .heading-1{
+  margin-top: 10%;
+  margin-bottom: 4%;
+  font-family: 'Righteous';
+  width: 80%;
+  color: whitesmoke;
+
+}
+.secion-7 .row{
+  position: absolute;
+  bottom: 0 !important;
+}
+
+.section-7 .para{
+  width: 80%;
+  font-family: 'Ubuntu';
+  color: whitesmoke;
+  margin-bottom: 7%;
+}
+.section-7 .btn{
+  margin-bottom: 15%;
+  width: 30%;
+  padding: 2% 5%;
+}
+
+.section-7 .container-fluid .row img{
+  position: absolute;
+
+  bottom: 0;
+
+}
+/*.section-7 .hand-phone{
+   background-image: url('../img/download-app.png');
+   position: absolute;       
+   background-repeat: no-repeat;
+   width: 100%;
+   height: 100%;
+   bottom:-500;
+   left:0;  
+   z-index: 3; 
+}*/
+
